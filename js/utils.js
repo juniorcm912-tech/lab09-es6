@@ -4,6 +4,6 @@ export const calcularTotal = (precio, cantidad = 1) =>
   precio * cantidad * (1 + iva);
 export const formatearMoneda = (monto) => `S/ ${monto.toFixed(2)}`;
 
-// Exportación por defecto (solo una por archivo)
+// Exportación por defecto
 const bienvenida = (nombre) => `Bienvenido(a), ${nombre}`;
 export default bienvenida;

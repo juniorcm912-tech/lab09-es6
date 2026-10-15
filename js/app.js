@@ -2,29 +2,27 @@ import bienvenida, { iva, calcularTotal, formatearMoneda } from "./utils.js";
 
 console.log("Laboratorio 09 listo");
 
-// ===== Ejercicio 2: let, const y arrow functions =====
+//  Ejercicio 2
 
-// Comparar ES5 con ES6+
 function sumaES5(a, b) {
   if (b === undefined) b = 0;
   return a + b;
 }
 
-const suma = (a, b = 0) => a + b; // ES6+
+const suma = (a, b = 0) => a + b;
 
-console.log(sumaES5(2, 3), suma(2, 3), suma(2)); // Debe mostrar: 5 5 2
+console.log(sumaES5(2, 3), suma(2, 3), suma(2));
 
 const saludar = (nombre = "invitado") => `Hola, ${nombre}`;
 const crearProducto = (nombre, precio) => ({ nombre, precio });
 
-console.log(saludar(), saludar("Ana")); // Debe mostrar: Hola, invitado Hola, Ana
-console.log(crearProducto("Mouse", 45)); // Debe mostrar: {nombre: 'Mouse', precio: 45}
+console.log(saludar(), saludar("Ana"));
+console.log(crearProducto("Mouse", 45));
 
-// Comprobar que const no se reasigna
 const descuento = 0.1;
 // descuento = 0.2;
 
-// ===== Ejercicio 3: Desestructuración =====
+//  Ejercicio 3
 const persona = { nombre: "Ana", edad: 22 };
 const { nombre, edad, ciclo = "V" } = persona;
 console.log(nombre, edad, ciclo); // Ana 22 V
@@ -33,7 +31,7 @@ console.log(primero, segundo); // 10 20
 const mostrar = ({ nombre, precio }) => `${nombre}: S/ ${precio}`;
 console.log(mostrar({ nombre: "Teclado", precio: 89 })); // Teclado: S/ 89
 
-// ===== Ejercicio 4: Spread y rest =====
+//  Ejercicio 4
 const base = [1, 2];
 const copia = [...base, 3];
 console.log(base, copia); // [1, 2] [1, 2, 3]
@@ -48,7 +46,7 @@ console.log(sumar(1, 2, 3, 4)); // 10
 const [ganador, ...otros] = ["Ana", "Luis", "Rosa"];
 console.log(ganador, otros); // Ana ['Luis', 'Rosa']
 
-// ===== Ejercicio 5: Módulos =====
+//  Ejercicio 5
 console.log(bienvenida("Ana")); // Bienvenido(a), Ana
 
 const productos = [
